@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp">
+
+
+
+
+        <ImageView
+            android:id="@+id/recipePic"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/recipeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="RecipeName"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/recipeServings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="1"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

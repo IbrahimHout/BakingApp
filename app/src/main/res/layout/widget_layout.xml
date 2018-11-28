@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="#eee"
+    android:layout_height="wrap_content"
+
+
+    android:minWidth="250dp"
+    android:minHeight="150dp">
+
+
+
+    <TextView
+        android:textColor="#000"
+        android:id="@+id/recipeNameWiget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:text="Recipe Name"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lable"
+        android:text="@string/ingredients"
+        android:textColor="#000"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/ingredientTvWidget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        />
+    <Button
+        android:padding="16dp"
+        android:id="@+id/buttonOpenRecipies"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/open_recipies"/>
+
+</LinearLayout>
