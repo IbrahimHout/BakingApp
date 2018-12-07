@@ -15,4 +15,5 @@ public class Constants {
     public static final String BUNDLE_KEY = "bundleKey";
     public static final String SHARED_PREFERENCES = "sharedPref";
     public static final String RECIPE_SAVED_FOR_WIDGET = "recipeForWidget";
+    public static final String POSITION = "position";
 }

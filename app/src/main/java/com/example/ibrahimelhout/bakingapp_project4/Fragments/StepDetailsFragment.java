@@ -103,6 +103,7 @@ public class StepDetailsFragment extends Fragment {
             public void onClick(View v) {
                 position++;
 
+                releaseVideoAssets();
                 populateStep(recipe.getSteps().get(position));
             }
         });
@@ -110,7 +111,7 @@ public class StepDetailsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 position--;
-
+                releaseVideoAssets();
                 populateStep(recipe.getSteps().get(position));
             }
         });
@@ -214,6 +215,9 @@ public class StepDetailsFragment extends Fragment {
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
 
+        if(mExoPlayer!=null){
+            outState.putLong(Constants.POSITION,mExoPlayer.getCurrentPosition());
+        }
         outState = getArguments();
 
     }
@@ -240,9 +244,21 @@ public class StepDetailsFragment extends Fragment {
         }
     }
 
+
+
+
+
     @Override
     public void onPause() {
         super.onPause();
+        releaseVideoAssets();
 
+    }
+
+    private void releaseVideoAssets() {
+        if (mExoPlayer!=null){
+            mExoPlayer.stop();
+            mExoPlayer.release();
+        }
     }
 }
